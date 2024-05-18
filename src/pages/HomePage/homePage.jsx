@@ -20,13 +20,14 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import "./homePage.css";
+import DonationPopup from "../../components/Popups/donationPopup";
 
 const HomePage = () => {
   const [value, setValue] = useState("");
   const [usdValue, setUsdValue] = useState("");
   const [showPopup, setShowPopup] = useState(true);
   const [launchDate, setLaunchDate] = useState(new Date("2024-05-01T00:00:00"));
-
+  const [popupIsOpen, setPopupIsOpen] = useState(false);
   useEffect(() => {
     const timeout = setTimeout(() => {
       setShowPopup(false);
@@ -113,6 +114,13 @@ const HomePage = () => {
   const handleClosePopup = () => {
     setShowPopup(false);
   };
+  const handleDonate = () => {
+    setPopupIsOpen(true);
+  };
+
+  const handleCloseDonatePopup = () => {
+    setPopupIsOpen(false);
+  };
 
   return (
     <>
@@ -184,12 +192,10 @@ const HomePage = () => {
               />
             </div> */}
             <button
-              onClick={() =>
-                window.open("https://t.me/blackpanthertkn", "_blank")
-              }
-              className="bg-yellow-500 hover:bg-gray-200 text-black font-bold py-3 px-6 md:px-8 rounded-full md:my-0 text-sm md:text-md w-full md:w-auto"
+              onClick={handleDonate}
+              className="bg-yellow-500 cursor-pointer hover:bg-gray-200 text-black font-bold py-3 px-6 md:px-8 rounded-full md:my-0 text-sm md:text-md w-full md:w-auto"
             >
-              Join Telegram Channel
+              Donate Now
             </button>
 
             <div className="text-center mt-3">
@@ -215,7 +221,7 @@ const HomePage = () => {
           </animated.div>
         </animated.div>
       </div>
-
+      <DonationPopup isOpen={popupIsOpen} onClose={handleCloseDonatePopup} />
       <animated.div
         style={logoAnimation}
         className="mt-8 flex flex-col items-center"
