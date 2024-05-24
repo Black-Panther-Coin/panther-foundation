@@ -21,6 +21,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import "./homePage.css";
 import DonationPopup from "../../components/Popups/donationPopup";
+import MissionAndvission from "../../components/Shared/MissionAndvission";
 
 const HomePage = () => {
   const [value, setValue] = useState("");
@@ -222,6 +223,7 @@ const HomePage = () => {
         </animated.div>
       </div>
       <DonationPopup isOpen={popupIsOpen} onClose={handleCloseDonatePopup} />
+      <MissionAndvission />
       <animated.div
         style={logoAnimation}
         className="mt-8 flex flex-col items-center"
