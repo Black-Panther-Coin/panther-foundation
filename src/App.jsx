@@ -10,7 +10,11 @@ import { publicProvider } from "wagmi/providers/public";
 import { CoinbaseWalletConnector } from "wagmi/connectors/coinbaseWallet";
 import { InjectedConnector } from "wagmi/connectors/injected";
 import { WalletConnectConnector } from "wagmi/connectors/walletConnect";
-
+import { BrowserRouter, Router, Route, Routes } from "react-router-dom";
+import Header from "./components/Header/header";
+import LandingPage from "./pages/Landing/LandingPage";
+import FooterNew from "./components/Footer/FooterNew";
+import { MenuaBarToggleProvider } from "./context/MenuBarContext";
 // 1. Get projectId
 const projectId = "45ff7348e614a721653a8d6d577b43da";
 
@@ -49,11 +53,20 @@ createWeb3Modal({ wagmiConfig, projectId, chains });
 
 function App() {
   return (
+    <MenuaBarToggleProvider>
     <WagmiConfig config={wagmiConfig}>
-      <div className="h-screen">
-        <HomePage />
+      <div className="h-full">
+        <Header />
+        <BrowserRouter>
+          <Routes>
+            {/* <Route path="/" element={<HomePage />} /> */}
+            <Route path="/" element={<LandingPage />} />
+          </Routes>
+        </BrowserRouter>
+        <FooterNew />
       </div>
     </WagmiConfig>
+    </MenuaBarToggleProvider>
   );
 }
 

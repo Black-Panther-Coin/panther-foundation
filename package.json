@@ -25,6 +25,7 @@
         "react-hot-toast": "^2.4.1",
         "react-modal": "^3.16.1",
         "react-responsive": "^10.0.0",
+        "react-router-dom": "^6.23.1",
         "react-spring": "^9.7.3",
         "viem": "^1.21.4",
         "wagmi": "^1.4.13"
