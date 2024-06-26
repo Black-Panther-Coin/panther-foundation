@@ -210,16 +210,16 @@ export const NavItems = [
     title: "OUR TEAM",
     slug: "/our-team",
   },
-  {
-    id: 4,
-    title: "REGISTER",
-    slug: "/register",
-  },
-  {
-    id: 5,
-    title: "DONATE",
-    slug: "/donate",
-  },
+  // {
+  //   id: 4,
+  //   title: "REGISTER",
+  //   slug: "/register",
+  // },
+  // {
+  //   id: 5,
+  //   title: "DONATE",
+  //   slug: "/donate",
+  // },
 ];
 
 export const BusinessData = [
@@ -276,5 +276,36 @@ export const NewsData=[
     id:2,
     image:"",
     content:"Karanja Gaçuça is an activist with Occupy Wall Street. Born in Kenya, Gaçuça attended Middlesex University in the UK and then moved to the United States. While in the U.S. Gaçuça worked"
+  },
+]
+
+export const TeamData=[
+  {
+    id:0,
+    teamName:"Meet our team",
+    imageUrl:"https://th.bing.com/th/id/OIP.SbV0Uuvj7z0Izlwvm8m9VQHaHU?w=214&h=211&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+    content1:"Karanja Gaçuça is an activist with Occupy Wall Street. Born in Kenya, Gaçuça attended Middlesex University in the UK and then moved to the United States. While in the U.S. Gaçuça worked",
+    content2:'He became active on Occupy Wall Streets public relations team in fall 2011'
+  },
+  {
+    id:1,
+    teamName:"Meet our team",
+    imageUrl:"https://th.bing.com/th/id/OIP.SbV0Uuvj7z0Izlwvm8m9VQHaHU?w=214&h=211&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+    content1:"Karanja Gaçuça is an activist with Occupy Wall Street. Born in Kenya, Gaçuça attended Middlesex University in the UK and then moved to the United States. While in the U.S. Gaçuça worked",
+    content2:'He became active on Occupy Wall Streets public relations team in fall 2011'
+  },
+  {
+    id:2,
+    teamName:"Meet our team",
+    imageUrl:"https://th.bing.com/th/id/OIP.SbV0Uuvj7z0Izlwvm8m9VQHaHU?w=214&h=211&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+    content1:"Karanja Gaçuça is an activist with Occupy Wall Street. Born in Kenya, Gaçuça attended Middlesex University in the UK and then moved to the United States. While in the U.S. Gaçuça worked",
+    content2:'He became active on Occupy Wall Streets public relations team in fall 2011'
+  },
+  {
+    id:3,
+    teamName:"Meet our team",
+    imageUrl:"https://th.bing.com/th/id/OIP.SbV0Uuvj7z0Izlwvm8m9VQHaHU?w=214&h=211&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+    content1:"Karanja Gaçuça is an activist with Occupy Wall Street. Born in Kenya, Gaçuça attended Middlesex University in the UK and then moved to the United States. While in the U.S. Gaçuça worked",
+    content2:'He became active on Occupy Wall Streets public relations team in fall 2011'
   },
 ]

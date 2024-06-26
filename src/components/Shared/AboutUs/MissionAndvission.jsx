@@ -1,5 +1,5 @@
 import React from "react";
-import { target } from "../../assets";
+import { target } from "../../../assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGraduationCap,
@@ -9,8 +9,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 const MissionAndvission = () => {
   return (
-    <div className="bg-black text-white p-10">
-      <div className="container mx-auto">
+    <div className="">
+      {/* <div className="container mx-auto">
         <h1 className="text-4xl  text-yellow-500 font-bold text-center mb-8">
           Our Mission and Vision
         </h1>
@@ -81,6 +81,41 @@ const MissionAndvission = () => {
               outcomes, and a brighter future.
             </p>
           </div>
+        </div>
+      </div> */}
+      <div className="flex flex-col justify-center md:flex-row gap-10 py-10 md:justify-around my-10 ">
+        <div className=" flex flex-col gap-10">
+          <h5
+            className="bg-[#ff9900] text-[#331138]
+               uppercase text-center text-xl font-bold py-3 rounded-3xl w-36 "
+          >
+            Vision
+          </h5>
+          <p
+            className="text-xl md:text-2xl text-[#ff9900]
+          font-semibold text-left py-10 bg-[#331138] px-10 rounded-xl"
+          >
+            Africans across the globe are equipped with the knowledge and tools
+            to navigate the crypto space and build financial security for
+            themselves and their communities.
+          </p>
+        </div>
+        <div className=" flex flex-col gap-10">
+          <h5
+            className="bg-[#ff9900] text-[#331138]
+               uppercase text-center text-xl font-bold py-3 rounded-3xl w-36 "
+          >
+            Mission
+          </h5>
+          <p
+            className="text-xl md:text-2xl text-[#ff9900]
+          font-semibold text-left py-10 bg-[#331138] px-10 rounded-xl"
+          >
+            Expand Financial Literacy: Bridge the digital divide by providing
+            accessible education on cryptocurrency and its potential for
+            economic empowerment across Africa, the Caribbean, and Latin
+            America.
+          </p>
         </div>
       </div>
     </div>

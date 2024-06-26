@@ -21,7 +21,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import "./homePage.css";
 import DonationPopup from "../../components/Popups/donationPopup";
-import MissionAndvission from "../../components/Shared/MissionAndvission";
+import MissionAndvission from "../../components/Shared/AboutUs/MissionAndvission";
 
 const HomePage = () => {
   const [value, setValue] = useState("");

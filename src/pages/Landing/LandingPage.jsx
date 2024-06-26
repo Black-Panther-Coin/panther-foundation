@@ -5,61 +5,27 @@ import {
   EarthBackground,
 } from "../../assets/index.js";
 import { BusinessData, NavItems } from "../../constants/constants.js";
-import { Link } from "react-router-dom";
+
 import AboutUsHome from "../../components/specific/AboutUs.jsx";
 import HomeContactUs from "../../components/specific/HomeContactUs.jsx";
-import { MenuBarContext } from "../../context/MenuBarContext.jsx";
+
+import Header from "../../components/Header/header.jsx";
+import NavItem from "../../components/Header/NavItem.jsx";
 
 const LandingPage = () => {
-  const { isMobileNavOpen } = useContext(MenuBarContext);
-  return (
-    <div className="h-full w-[100%] ">
+  return ( 
+    <div className="h-full w-screen overflow-hidden">
+      <Header />
       <div
-        className="h-[100vh] w-[100vw]"
+        className="h-[100vh] w-screen"
         style={{
           backgroundImage: `url(${EarthBackground})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <nav className="h-14 w-full flex justify-center items-center bg-[rgba(49,17,24,0.4)]  relative">
-          <div className="hidden md:block">
-            <ul className="flex items-center gap-10 opacity-100  ">
-              {NavItems.map((nav) => (
-                <li key={nav.id} className="opacity-100">
-                  <Link
-                    to={nav.slug}
-                    className="text-white font-semibold cursor-pointer
-                 hover:text-sky-600 transition-all opacity-100 
-                 md:text-xl "
-                  >
-                    {nav.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div
-            className={
-              isMobileNavOpen ? "bg-[rgb(145,65,148)] absolute right-2 top-10 w-[200px] rounded-md py-2 transition-all duration-150 block " : " transition-all duration-150 hidden"
-            }
-          >
-            <ul className="flex flex-col items-center gap-10 opacity-100  ">
-              {NavItems.map((nav) => (
-                <li key={nav.id} className="opacity-100">
-                  <Link
-                    to={nav.slug}
-                    className="text-white font-semibold cursor-pointer
-                 hover:text-sky-600 transition-all opacity-100 
-                 md:text-xl "
-                  >
-                    {nav.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <nav className="h-14 w-full flex justify-center items-center bg-[rgba(49,17,24,0.4)]  ">
+          <NavItem className={"left-0 top-7 px-2 py-2"} />
         </nav>
 
         <Hero />
@@ -98,6 +64,7 @@ const LandingPage = () => {
         </div>
       </section>
       <HomeContactUs />
+      
     </div>
   );
 };
